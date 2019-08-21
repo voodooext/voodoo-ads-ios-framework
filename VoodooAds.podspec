@@ -11,10 +11,15 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://www.voodoo.io'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Med Hajlaoui' => 'mhajlaoui@voodoo.io' }
-  s.source           = { :git => 'https://github.com/VoodooTeam/voodoo-ads-ios.git', :tag => s.version.to_s }
+  s.source           = { :git => 'git@github.com:VoodooTeam/voodoo-ads-ios.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'
 
-  s.vendored_frameworks = 'VoodooAds.framework'
+  framework             = s.name 
+  s.source_files        = [ "%s.framework/**/*.{h,m}" % [framework] ]
+  s.preserve_paths      = "%s.framework" % [framework] 
+  s.public_header_files = "%s.framework/**/*.h" % [framework] 
+  s.vendored_frameworks = '%s.framework' % [framework] 
+  s.resources           = '%s.framework/*.bundle' % [framework] 
 
 end
