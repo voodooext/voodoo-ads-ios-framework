@@ -15,7 +15,6 @@ fi
 
 sed -i '' "s/s.version[ ]*=[ ]*'[0-9]*.[0-9]*.[0-9]*'/s.version          = \'$VERSION\'/g" $POD_SPEC
 
-#pod lib lint --allow-warnings 
 git add -A && git commit -m "Release $VERSION."
 git tag $VERSION
 git push --tags
