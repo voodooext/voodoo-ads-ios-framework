@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'VoodooAds'
-  s.version          = '3.1.2'
+  s.version          = '3.1.3'
   s.summary          = 'Voodoo Ads iOS SDK is a framework enabling in-app advertising.'
 
   s.description      = <<-DESC
