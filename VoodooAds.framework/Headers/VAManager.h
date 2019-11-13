@@ -57,10 +57,11 @@ typedef NS_ENUM(NSInteger, VAPlacementFormat) {
 /**
  * Request an Ad to display with the given zone id
  * @param zoneId Zone identifier.
+ * @param mediationName  Mediation name.
  */
-- (void)requestWithZoneId:(nullable NSString *)zoneId;
-
-
+- (void)requestWithZoneId:(nullable NSString *)zoneId
+            mediationName:(NSString *_Nullable)mediationName;
+ 
 /**
  *  Plays a video ad for a given placement format.
  *
@@ -94,5 +95,6 @@ typedef NS_ENUM(NSInteger, VAPlacementFormat) {
  *  @param loggingEnabled A boolean value indicating if the logging is enabled
  */
 + (void)setLoggingEnabled:(BOOL)loggingEnabled;
+ 
 
 @end
